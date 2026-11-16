@@ -73,6 +73,4 @@
 ## 9. 提出物とプロジェクト管理 (VII, VIII, IX)
 - **[MUST]** ゲームをパブリックなプラットフォーム（Steam, Itch.io等）で起動できるパッケージとして提供すること 。
 - **[MUST]** リポジトリ内にプロジェクト管理の証拠（タイムライン、進捗追跡、リスク分析、タスク分担、テスト計画など）を保存した専用ディレクトリを用意すること 。
-- **[MUST]** `README.md` の1行目は指定されたフォーマットの斜体文字（This project has been created as part...）にすること
-- **[MUST]** `README.md` に以下のセクションを含めること: Description, Instructions, Resources (AIの使用目的含む), Configuration, Highscore, Maze Generation, Implementation, General Software Architecture, Project Management。
 - **[UP TO YOU]** どのようなプロジェクト管理手法・ツール（Kanban等）を使うかは自由。

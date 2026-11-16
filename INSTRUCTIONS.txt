@@ -1,5 +1,5 @@
 ================================================================
- Pac-Man - a 42 school project by contributorA, student
+ Pac-Man - maze chase game
 ================================================================
 
 HOW TO PLAY
