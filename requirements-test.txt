@@ -1,0 +1,5 @@
+pytest>=8
+pydantic>=2
+pygame>=2.6.1
+# pygame 2.x imports pkg_resources; use its Python 3.12-compatible release.
+setuptools>=70,<81

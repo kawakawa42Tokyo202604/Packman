@@ -1,6 +1,9 @@
 .PHONY: install run debug clean fclean lint lint-strict test package
 
 CONFIG = config.json
+UV ?= uv
+TEST_PYTHON ?= 3.12
+TEST_ARGS ?=
 SRC_DIR = src
 MAIN_SCRIPT = pac-man.py
 TEST_DIR = tests/
@@ -44,8 +47,11 @@ lint-strict:
 	uv run mypy --strict .
 
 test:
-	@echo "Running test suite with pytest..."
-	PYTHONPATH=. uv run python -m pytest $(TEST_DIR) -v
+	SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy PYGAME_HIDE_SUPPORT_PROMPT=1 \
+	$(UV) run --no-project --python $(TEST_PYTHON) \
+		--with-requirements requirements-test.txt \
+		--with ./package/mazegenerator-2.1.0-py3-none-any.whl \
+		python -m pytest $(TEST_DIR) -v $(TEST_ARGS)
 
 package:
 	@echo "Building the distributable game package..."
